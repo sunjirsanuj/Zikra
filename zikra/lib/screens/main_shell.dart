@@ -1,3 +1,7 @@
+import 'package:Zikra/screens/analytics_screen.dart';
+import 'package:Zikra/screens/history_screen.dart';
+import 'package:Zikra/screens/home_screen.dart';
+import 'package:Zikra/screens/zikir_screen.dart';
 import 'package:flutter/material.dart';
 
 class MainShell extends StatefulWidget {
@@ -8,8 +12,52 @@ class MainShell extends StatefulWidget {
 }
 
 class _MainShellState extends State<MainShell> {
+  int _index = 0;
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final pages = [
+      HomeScreen(),
+      const ZikirScreen(),
+      const HistoryScreen(),
+      const AnalyticsScreen(),
+    ];
+    return Scaffold(
+      body: SafeArea(
+          child: IndexedStack(
+        index: _index,
+        children: pages,
+      )),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _index,
+        onDestinationSelected: (value) => setState(() => _index = value),
+        backgroundColor: Colors.white,
+        indicatorColor: const Color(0xFFE7F3EE),
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home),
+            label: 'Home',
+          ),
+
+          NavigationDestination(
+            icon: Icon(Icons.spa_outlined),
+            selectedIcon: Icon(Icons.spa),
+            label: 'Zikir',
+          ),
+
+          NavigationDestination(
+            icon: Icon(Icons.history),
+            selectedIcon: Icon(Icons.history_toggle_off),
+            label: 'History',
+          ),
+          
+          NavigationDestination(
+            icon: Icon(Icons.bar_chart_outlined),
+            selectedIcon: Icon(Icons.bar_chart),
+            label: 'Insights',
+          ),
+        ],
+      ),
+    );
   }
 }
