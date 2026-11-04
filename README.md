@@ -10,7 +10,7 @@ Download and install Zikra on your Android device.
 
 | Version | Download |
 |:---|:---|
-| v1.0.0 | [Download APK](YOUR_V1.0.0_APK_LINK) |
+| v1.0.0 | [Download APK](https://github.com/sunjirsanuj/Zikra/releases/download/v1.0.0/Zikra_v1.0.0.apk) |
 
 > New versions will be added to this section as they become available. Previous versions will remain available for download.
 
