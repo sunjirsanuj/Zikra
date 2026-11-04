@@ -39,8 +39,10 @@ Download and install Zikra on your Android device.
 
 <p align="center">
   <img src="zikra/ss/1.png" width="200"/>
-  <img src="zikra/ss/1.png" width="200"/>
-  <img src="zikra/ss/1.png" width="200"/>
+  <img src="zikra/ss/2.png" width="200"/>
+  <img src="zikra/ss/3.png" width="200"/>
+  <img src="zikra/ss/4.png" width="200"/>
+  <img src="zikra/ss/5.png" width="200"/>
 </p>
 
 ## 🚀 Getting Started
