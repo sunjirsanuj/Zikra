@@ -16,7 +16,9 @@ class _MainShellState extends State<MainShell> {
   @override
   Widget build(BuildContext context) {
     final pages = [
-      HomeScreen(),
+      HomeScreen(
+        onViewAll: () => setState(() => _index = 1),
+      ),
       const ZikirScreen(),
       const HistoryScreen(),
       const AnalyticsScreen(),
@@ -38,19 +40,16 @@ class _MainShellState extends State<MainShell> {
             selectedIcon: Icon(Icons.home),
             label: 'Home',
           ),
-
           NavigationDestination(
             icon: Icon(Icons.spa_outlined),
             selectedIcon: Icon(Icons.spa),
             label: 'Zikir',
           ),
-
           NavigationDestination(
             icon: Icon(Icons.history),
             selectedIcon: Icon(Icons.history_toggle_off),
             label: 'History',
           ),
-          
           NavigationDestination(
             icon: Icon(Icons.bar_chart_outlined),
             selectedIcon: Icon(Icons.bar_chart),
